@@ -9,5 +9,12 @@ and then;
 
 python3 chatServer.py 130.89.6.69 8082
 
+and then;
+
 python3 serverforRobot.py
+
+or simply run the script file;
+
+sh startServer.sh
+
 
