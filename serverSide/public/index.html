@@ -1,1 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO Demo</title>
+  </head>
+  <body>
+    <h1>Socket.IO Demo</h1>
+    <script src="/socket.io.min.js"></script>
+    <script src="/index.js"></script>
+    <input type="button" value="Feedback 1" id="btn1" class="feedback">
+    <input type="button" value="Feedback 2" id="btn2" class="feedback">
+    <input type="button" value="Feedback 3" id="btn3" class="feedback">
+    <input type="button" value="Join Room" id="btn4">
 
+    <div id="responsefromrobot" style="color:red"></div>
+    
+    <script src="/jquery-3.6.0.slim.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#btn1").on("click", function(e){
+          requestFeedback(1);
+        });
+
+        $("#btn2").on("click", function(e){
+          requestFeedback(2);
+        });
+
+        $("#btn3").on("click", function(e){
+          requestFeedback(3);
+        });
+
+        $("#btn4").on("click", function(e){
+          joinRoom();
+        });
+      });
+    </script>
+  </body>
+</html>
